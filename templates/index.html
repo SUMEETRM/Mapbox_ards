@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heatmap</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        #map-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        #control-container {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <div id="control-container">
+            <input type="checkbox" value="0" id="toggle0"> Option 0<br>
+            <input type="checkbox" value="1" id="toggle1"> Option 1<br>
+            <input type="checkbox" value="2" id="toggle2"> Option 2<br>
+            <input type="checkbox" value="3" id="toggle3"> Option 3<br>
+            <input type="checkbox" value="4" id="toggle4"> Option 4<br>
+            <input type="checkbox" value="5" id="toggle5"> Option 5<br>
+            <input type="checkbox" value="6" id="toggle6"> Option 6<br>
+            <input type="checkbox" value="7" id="toggle7"> Option 7<br>
+            <button id="submit">Submit</button>
+        </div>
+        <div id='map'></div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
