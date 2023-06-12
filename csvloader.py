@@ -79,6 +79,10 @@ def weights(combined_data, weight_toggle):
     weights, r2 = calculate_weights_rf('state_data_1.csv')
     weight_toggle_int = [int(i) for i in weight_toggle]
     #weight_toggle_int = [x for x in weight_toggle_int if x not in [8, 9]]
+    if 8 in weights:
+        weights.remove(8)
+    if 9 in weights:
+        weights.remove(9)
     storeweights = weights.copy()
     storeweights*=0
     for i in weight_toggle_int:

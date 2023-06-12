@@ -51,8 +51,21 @@ document.getElementById('submit').addEventListener('click', function () {
         },
         body: JSON.stringify(toggles)
     })
-        .then(response => response.json())
-        .then(data => {
-            map.getSource('heat').setData(data);
-        });
+    .then(response => response.json())
+    .then(data => {
+        map.getSource('heat').setData(data.main); 
+        if (data.cluster !== null) {
+            // Add the cluster source and layer to the map
+            // Use data.cluster as the data for the source
+            // Be sure to check if the cluster source and layer already exist before adding them,
+            // and if they do, don't add them again
+            // map.addSource
+        } else {
+            // Remove the cluster source and layer from the map if they exist
+        }
+       // if (toggles.includes(9)) 
+       //Add that side panel list
+       //else
+       //remove the side panel list if it exists
+    });
 });
